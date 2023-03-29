@@ -1,0 +1,3 @@
+npm install connect-mongodb-session
+
+IMPORTANTE: modificar rutas del server de mongo, parametro 'localhost' a '127.0.0.1'
