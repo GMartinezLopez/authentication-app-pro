@@ -1,8 +1,8 @@
-const express = require('express');
-const authController = require('../controllers/authController');
-const bodyParser = require('body-parser');
-const router = express.Router();
-const User = require('../models/user');
+const express = require('express')
+const authController = require('../controllers/authController')
+const bodyParser = require('body-parser')
+const router = express.Router()
+const User = require('../models/user')
 
 // Parse request body
 router.use(bodyParser.urlencoded({ extended: true }));

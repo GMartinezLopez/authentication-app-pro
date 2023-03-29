@@ -1,21 +1,13 @@
-<!doctype html>
-<html lang="es">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reprobados UT</title>
-    <link rel="stylesheet" href="/css/pure/pure-min.css">
-    <link rel="stylesheet" href="/css/pure/grids-responsive-min.css">
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-    <link rel="stylesheet" href="/layouts/marketing/styles.css">
-</head>
-<style>
-    * {
+* {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
+/*
+* -- BASE STYLES --
+* Most of these are inherited from Base, but I want to change a few.
+*/
 body {
   line-height: 1.7em;
   color: #7f8c8d;
@@ -37,6 +29,10 @@ label {
   height: auto;
 }
 
+/*
+* -- LAYOUT STYLES --
+* These are some useful classes which I will need
+*/
 .l-box {
   padding: 1em;
 }
@@ -50,6 +46,12 @@ label {
   text-align: center;
 }
 
+
+
+/*
+* -- PURE FORM STYLES --
+* Style the form inputs and labels
+*/
 .pure-form label {
   margin: 1em 0 0;
   font-weight: bold;
@@ -282,18 +284,3 @@ a.pure-button-primary {
       font-size: 300%;
   }
 }
-</style>
-<body>
-<div class="splash-container">
-    <div class="splash">
-        <h1 class="splash-head">¿Reprobado?</h1>
-        <p class="splash-subhead">
-            No te preocupes, este es tu blog ideal
-        </p>
-        <p>
-            <a href="/auth/login" class="pure-button pure-button-primary" style="text-decoration: none;">Iniciar sesion</a>
-        </p>
-    </div>
-</div>
-</body>
-</html>
