@@ -21,5 +21,8 @@
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.0.3",
     "mongose": "^0.0.2-security"
+  },
+  "devDependencies": {
+    "semantic-ui-ember": "github:Semantic-Org/Semantic-UI-Ember"
   }
 }
