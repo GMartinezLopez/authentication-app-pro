@@ -1,5 +1,6 @@
 const User = require('../models/user')
 const BlogSchema = require('../models/publicacionesalv')
+const UserSchema = require('../models/user')
 
 // Función para renderizar el home
 function getHome(req, res) {
@@ -24,6 +25,13 @@ function getBlog(req, res) {
   res.render('blog')
 }
 
+function getPubli(req, res) {
+  res.render('publi')
+}
+
+function getEditPost(req, res) {
+  res.render('editPost')
+}
 // Función para iniciar sesión
 async function login(req, res) {
   try {
@@ -31,7 +39,7 @@ async function login(req, res) {
     const user = await User.findOne({ email })
     if (user && password) {
       req.session.userId = user._id
-      return res.redirect('/')
+      return res.redirect('blog')
     }
     res.render('login', { message: 'Invalid email or password' })
   } catch (error) {
@@ -59,8 +67,9 @@ async function getUser(req, res) {
 async function getBlogs(req, res) {
   try {
     const posts = await BlogSchema.find()
+    const usuario = await UserSchema.findById(req.session.userId).select('-password')
     // Enviamos los datos del usuario como respuesta
-    res.render('blog', { posts })
+    res.render('blog', { posts, usuario })
   } catch (error) {
     console.error(error)
     res.status(500).json({ msg: 'Error al obtener los posts' })
@@ -79,6 +88,8 @@ async function postBlog(req, res) {
     res.render('blog', { message: 'Error creating post' })
   }
 }
+
+
 
 async function putBlog(req, res) {
   try {
@@ -120,4 +131,6 @@ module.exports = {
   postBlog,
   putBlog,
   deleteBlog,
+  getPubli,
+  getEditPost
 }
