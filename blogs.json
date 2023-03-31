@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "64265cecb05569ea5c4b7e30"
+  },
+  "title": "Uso de Node.js",
+  "desc": "¿Qué es y para qué sirve NodeJS?\nIdeado como un entorno de ejecución de JavaScript orientado a eventos asíncronos, Node. js está diseñado para crear aplicaciones network escalables. En el siguiente ejemplo de \"hola mundo\", pueden atenderse muchas conexiones simultáneamente.",
+  "img": "https://res.cloudinary.com/practicaldev/image/fetch/s--vrvqSDHx--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/s15ubgod56c7butyt7eu.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64266b7d3f5d80654a3b93e2"
+  },
+  "title": "Curso HTML",
+  "desc": "HTML es un markup language, lo que significa que está escrito con códigos que puede leer una persona sin que sea necesario compilarlo primero. En otras palabras, el texto en una página web está «marcado» con estos códigos para dar instrucciones al navegador web sobre cómo mostrar el texto.",
+  "img": "https://www.gruponw.com/nwlib6/includes/phpthumb/phpThumb.php?src=/imagenes/html.jpg&w=700&f=webp",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64266fb83f5d80654a3b93f9"
+  },
+  "title": "GitHub",
+  "desc": "GitHub es un servicio basado en la nube que aloja un sistema de control de versiones (VCS) llamado Git. Éste permite a los desarrolladores colaborar y realizar cambios en proyectos compartidos, a la vez que mantienen un seguimiento detallado de su progreso.",
+  "img": "https://marketing4ecommerce.net/wp-content/uploads/2018/06/GitHub-logo-2-imagen.jpg",
+  "__v": 0
+}]
