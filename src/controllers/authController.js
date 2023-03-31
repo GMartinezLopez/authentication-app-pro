@@ -24,6 +24,13 @@ function getBlog(req, res) {
   res.render('blog')
 }
 
+function getPubli(req, res) {
+  res.render('publi')
+}
+
+function getEditPost(req, res) {
+  res.render('editPost')
+}
 // Función para iniciar sesión
 async function login(req, res) {
   try {
@@ -120,4 +127,6 @@ module.exports = {
   postBlog,
   putBlog,
   deleteBlog,
+  getPubli,
+  getEditPost
 }
