@@ -4,7 +4,6 @@ const bodyParser = require('body-parser')
 const router = express.Router()
 const User = require('../models/user')
 const Publicacionesalv = require('../models/publicacionesalv')
-
 // Parse request body
 router.use(bodyParser.urlencoded({ extended: true }))
 
@@ -42,6 +41,6 @@ router.get('/editPost', authController.getEditPost)
 router.post('/blog', authController.postBlog)
 router.put('/blog', authController.putBlog)
 router.delete('/blog/:id', authController.deleteBlog)
-
+router.get('/editPost', authController.getEditPost)
 
 module.exports = router
