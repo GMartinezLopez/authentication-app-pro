@@ -1,5 +1,6 @@
 const User = require('../models/user')
 const BlogSchema = require('../models/publicacionesalv')
+const UserSchema = require('../models/user')
 
 // Función para renderizar el home
 function getHome(req, res) {
@@ -66,8 +67,9 @@ async function getUser(req, res) {
 async function getBlogs(req, res) {
   try {
     const posts = await BlogSchema.find()
+    const usuario = await UserSchema.findById(req.session.userId).select('-password')
     // Enviamos los datos del usuario como respuesta
-    res.render('blog', { posts })
+    res.render('blog', { posts, usuario })
   } catch (error) {
     console.error(error)
     res.status(500).json({ msg: 'Error al obtener los posts' })
@@ -86,6 +88,8 @@ async function postBlog(req, res) {
     res.render('blog', { message: 'Error creating post' })
   }
 }
+
+
 
 async function putBlog(req, res) {
   try {

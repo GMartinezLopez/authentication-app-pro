@@ -184,9 +184,10 @@
       </div>
     </header>
     <div class="post" id="side-bar">
-      <h2>Usuario</h2>
+      <li><strong>Nombre:</strong> <%= usuario.name %></li>
+      <li><strong>Email:</strong> <%= usuario.email %></li>
+    
 
-      <p>correo</p>
       <hr />
       <a href="/auth/editPost"
         ><img
@@ -195,9 +196,10 @@
       /></a>
     </div>
     <div class="container">
-      <div class="post">
-        <a href="/auth/publi">Ver más</a>
+
         <% posts.forEach(function(post) { %>
+          <div class="post">
+            <a href="/auth/publi">Ver más</a>
         <h2><%= post.title %></h2>
         <p><%= post.desc %></p>
         <img class="imagen"
@@ -205,40 +207,10 @@
           src="<%= encodeURI( post.img ) %>"
           alt="aqui hay una imagen"
         />
+      </div>
         <% }) %>
-      </div>
-      <div class="post">
-        <a href="/auth/publi">Ver más</a>
-        <h2>Título de la publicación</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-          euismod sapien sed risus pretium, ac consequat augue fermentum.
-          Aliquam in nulla vestibulum, pharetra enim a, laoreet velit. Duis
-          commodo elit libero, et pharetra quam semper sed. In eu commodo metus,
-          vel tempor quam. Nullam molestie leo eget aliquam suscipit. Nam eu
-          nulla sed nisl sagittis hendrerit in non magna. Pellentesque habitant
-          morbi tristique senectus et netus et malesuada fames ac turpis
-          egestas.
-        </p>
-      </div>
-      <div class="post">
-        <a href="/auth/publi">Ver más</a>
-        <h2>Título de la publicación</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-          euismod sapien sed risus pretium, ac Imagen consequat augue fermentum.
-          Aliquam in nulla vestibulum, pharetra enim a, laoreet velit. Duis
-          commodo elit libero, et pharetra quam semper sed. In eu commodo metus,
-          vel tempor quam. Nullam molestie leo eget aliquam suscipit. Nam eu
-          nulla sed nisl sagittis hendrerit in non magna. Pellentesque habitant
-          morbi tristique senectus et netus et malesuada fames ac turpis
-          egestas.
-        </p>
-        <img
-          src="https://via.placeholder.com/500x300.png"
-          alt="Imagen de la publicación"
-        />
-      </div>
+
+
     </div>
     <footer>
       <p>© 2023 Blog de los reprobados UT</p>

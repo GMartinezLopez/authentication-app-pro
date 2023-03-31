@@ -43,4 +43,5 @@ router.post('/blog', authController.postBlog)
 router.put('/blog', authController.putBlog)
 router.delete('/blog/:id', authController.deleteBlog)
 
+
 module.exports = router
