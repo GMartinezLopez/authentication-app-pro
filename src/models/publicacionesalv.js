@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose')
 
 const BlogSchema = new mongoose.Schema({
   title: {
@@ -11,9 +11,9 @@ const BlogSchema = new mongoose.Schema({
     unique: true,
   },
   img: {
-    type: obj,
+    type: Object,
     required: true,
   },
-});
+})
 
-module.exports = mongoose.model("Blog", BlogSchema);
+module.exports = mongoose.model('Blog', BlogSchema)
