@@ -31,7 +31,7 @@ async function login(req, res) {
     const user = await User.findOne({ email })
     if (user && password) {
       req.session.userId = user._id
-      return res.redirect('/')
+      return res.redirect('blog')
     }
     res.render('login', { message: 'Invalid email or password' })
   } catch (error) {
