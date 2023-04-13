@@ -10,6 +10,9 @@ function getHome(req, res) {
 function getIndex(req, res) {
   res.render('index')
 }
+function getEditPost(req, res) {
+  res.render('editPost')
+}
 // Función para renderizar la vista register
 function getRegister(req, res) {
   res.render('register', { message: 'Invalid username or password' })
@@ -20,8 +23,8 @@ function getLogin(req, res) {
   res.render('login', { message: 'Invalid username or password' })
 }
 
-function getBlog(req, res) {
-  res.render('blog')
+function getPubli(req, res) {
+  res.render('publi')
 }
 
 // Función para iniciar sesión
@@ -115,9 +118,10 @@ module.exports = {
   getRegister,
   getLogin,
   getHome,
-  getBlog,
   getBlogs,
+  getPubli,
   postBlog,
   putBlog,
   deleteBlog,
+  getEditPost,
 }

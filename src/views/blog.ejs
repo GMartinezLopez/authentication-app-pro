@@ -2,14 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Blog al estilo Twitter</title>
+    <title>Reprobados UT</title>
     <style>
       /* Estilos globales  */
       body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-      }
+  font-family: Arial,sans-serif;
+  color: #292f33;
+}
 
       /* / Encabezado / */
       .sticky-header {
@@ -37,8 +36,11 @@
         padding-top: 80px;
         display: flex;
         flex-direction: column;
-        margin: 20px;
         max-width: 600px;
+        line-height: 18px;
+        width: 588px;
+        margin: auto;
+        border-radius: 5px;
       }
 
       /* / Publicación / */
@@ -49,6 +51,9 @@
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         margin-bottom: 10px;
         padding: 10px;
+        justify-content: center; /* Agregar esta línea */
+        align-items: center; /* Agregar esta línea */
+
       }
 
       .post img {
@@ -133,7 +138,7 @@
 
   <body>
     <header class="sticky-header">
-      <h1>TU PAPA ES HDTPTM</h1>
+      <h1>HOME PAGE</h1>
       <!-- <a style="text-decoration: none" href="/auth/register"><h2>Registrarse</h2></a> -->
       <div class="gta5">
         <a style="text-decoration: none" class="button" href="/auth/login">
@@ -187,51 +192,13 @@
 
     <div class="container">
       <div class="post">
-        <h2>Título de la publicación</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-          euismod sapien sed risus pretium, ac consequat augue fermentum.
-          Aliquam in nulla vestibulum, pharetra enim a, laoreet velit. Duis
-          commodo elit libero, et pharetra quam semper sed. In eu commodo metus,
-          vel tempor quam. Nullam molestie leo eget aliquam suscipit. Nam eu
-          nulla sed nisl sagittis hendrerit in non magna. Pellentesque habitant
-          morbi tristique senectus et netus et malesuada fames ac turpis
-          egestas.
-        </p>
-        <img
-          src="https://via.placeholder.com/500x300.png"
-          alt="Imagen de la publicación"
+        <% posts.forEach(function(post) { %>
+        <h2><%= post.title %></h2>
+        <p><%= post.desc %></p>
+        <img title="imagen"
+          src= "<%= encodeURI( post.img ) %>" alt="aqui hay una imagen"
         />
-      </div>
-      <div class="post">
-        <h2>Título de la publicación</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-          euismod sapien sed risus pretium, ac consequat augue fermentum.
-          Aliquam in nulla vestibulum, pharetra enim a, laoreet velit. Duis
-          commodo elit libero, et pharetra quam semper sed. In eu commodo metus,
-          vel tempor quam. Nullam molestie leo eget aliquam suscipit. Nam eu
-          nulla sed nisl sagittis hendrerit in non magna. Pellentesque habitant
-          morbi tristique senectus et netus et malesuada fames ac turpis
-          egestas.
-        </p>
-      </div>
-      <div class="post">
-        <h2>Título de la publicación</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-          euismod sapien sed risus pretium, ac Imagen consequat augue fermentum.
-          Aliquam in nulla vestibulum, pharetra enim a, laoreet velit. Duis
-          commodo elit libero, et pharetra quam semper sed. In eu commodo metus,
-          vel tempor quam. Nullam molestie leo eget aliquam suscipit. Nam eu
-          nulla sed nisl sagittis hendrerit in non magna. Pellentesque habitant
-          morbi tristique senectus et netus et malesuada fames ac turpis
-          egestas.
-        </p>
-        <img
-          src="https://via.placeholder.com/500x300.png"
-          alt="Imagen de la publicación"
-        />
+        <% }) %>
       </div>
     </div>
     <footer>
